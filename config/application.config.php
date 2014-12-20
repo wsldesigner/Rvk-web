@@ -7,8 +7,7 @@
  */
 return array(
     'modules' => array(
-        'Application',
-        'Usuario'
+        'Application'
     ),
     'module_listener_options' => array(
         'module_paths' => array(
