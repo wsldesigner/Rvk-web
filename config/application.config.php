@@ -8,8 +8,6 @@
 return array(
     'modules' => array(
         'Application',
-        'Usuarios',
-        'Usuario',
         'DoctrineModule',
         'DoctrineORMModule',
         'ZendDeveloperTools',
