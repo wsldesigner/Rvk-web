@@ -9,7 +9,10 @@ return array(
     'modules' => array(
         'Application',
         'Usuarios',
-        'Usuario'
+        'Usuario',
+        'DoctrineModule',
+        'DoctrineORMModule',
+        'ZendDeveloperTools',
     ),
     'module_listener_options' => array(
         'module_paths' => array(
