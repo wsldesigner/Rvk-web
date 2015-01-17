@@ -1,0 +1,18 @@
+<?php
+
+
+$form = $this->form;
+
+$form->setAttribute('action', $this->url('ordemservico', array('action' => 'add', 'usuario' => $codigoUsuario)));
+
+$form->prepare();
+
+echo $this->form()->opentag($form);
+
+//var_dump($form->get('abc'));
+echo $this->formRow($form->get('id'));
+echo $this->fieldRow($form->get('numero'));
+echo $this->fieldRow($form->get('dataAbertura'));
+echo $this->fieldRow($form->get('descricaoDefeito'));
+echo $this->fieldRow($form->get('tipo_tecnico'));
+echo $this->fieldRow($form->get('submit'));

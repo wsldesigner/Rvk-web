@@ -1,0 +1,55 @@
+<?php if(isset($flashMessages) && !empty($flashMessages)):?>
+    <div class="alert alert-warning alert-dismissable fade in" role="alert">
+        <button class="close" aria-label="Close" data-dismiss="alert" type="button">
+            <span aria-hidden="true">x</span>
+        </button>
+        <ul>
+            <?php foreach($flashMessages as $message): ?>
+                <li><?php echo $message ?></li
+            <?php endforeach ?>
+
+        </ul>
+    </div>
+<?php endif ?>
+<div class="col-sm-2 col-sm-offset-10">
+    <a href="<?php echo $this->url('usuario', array('action'=> 'add'))?>"><h3><span class="label label-default">Adicionar Usuario</span></h3> </a>
+</div>
+
+<div class="table-responsive col-sm-12" >
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Código</th>
+                <th>Nome Usuario</th>
+                <th>Telefone</th>
+                <th>Celular</th>
+                <th>CPF</th>
+                <th>Tipo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+            foreach($usuarios as $usuario):
+        ?>
+            <tr>
+                <td>XXX</td>
+                <td><?php echo $usuario->getCodigoUsuario() ?></td>
+                <td><?php echo $usuario->getNome() ?></td>
+                <td><?php echo $usuario->getTelefone() ?></td>
+                <td><?php echo $usuario->getCelular() ?></td>
+                <td><?php echo $usuario->getCpf() ?></td>
+                <td><?php echo $usuario->getTipo()->getNome() ?></td>
+                <td>
+
+                    <a href="<?php echo $this->url('usuario', array('action' => 'edit', 'codigo' => $usuario->getCodigoUsuario()))?>"><span class="glyphicon glyphicon-pencil"></span></a>
+                    <a href="<?php echo $this->url('usuario', array('action' => 'remove', 'codigo' => $usuario->getCodigoUsuario()))?>"><span class="glyphicon glyphicon-remove"></span></a>
+                    <a href="<?php echo $this->url('ordemservico', array('action' => 'add', 'usuario' => $usuario->getId()))?>"><span class="glyphicon glyphicon-pencil"></span></a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+

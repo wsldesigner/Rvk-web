@@ -1,0 +1,22 @@
+<?php
+
+$form = $this->form;
+
+$form->setAttribute('action', $this->url('usuario', array('action' => 'add')));
+
+$form->prepare();
+
+echo $this->form()->opentag($form);
+
+    //var_dump($form->get('abc'));
+    echo $this->formRow($form->get('id'));
+    echo $this->fieldRow($form->get('nome'));
+    echo $this->fieldRow($form->get('codigoUsuario'));
+    echo $this->fieldRow($form->get('endereco'));
+    echo $this->fieldrow($form->get('telefone'));
+    echo $this->fieldRow($form->get('celular'));
+    echo $this->fieldRow($form->get('cpf'));
+    echo $this->fieldRow($form->get('email'));
+    echo $this->fieldRow($form->get('tipo_usuario'));
+    echo $this->fieldRow($form->get('senha'));
+    echo $this->fieldRow($form->get('submit'));

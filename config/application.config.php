@@ -7,10 +7,13 @@
  */
 return array(
     'modules' => array(
-        'Application',
+
         'DoctrineModule',
         'DoctrineORMModule',
         'ZendDeveloperTools',
+        'Application',
+        'Usuario',
+        'Ordemservico'
     ),
     'module_listener_options' => array(
         'module_paths' => array(

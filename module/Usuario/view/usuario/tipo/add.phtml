@@ -1,0 +1,14 @@
+<?php
+
+$form = $this->form;
+
+$form->setAttribute('action', $this->url('tipo', array('action' => 'add')));
+
+$form->prepare();
+
+echo $this->form()->opentag($form);
+
+//var_dump($form->get('abc'));
+echo $this->fieldRow($form->get('id'));
+echo $this->fieldRow($form->get('nome'));
+echo $this->fieldRow($form->get('submit'));
